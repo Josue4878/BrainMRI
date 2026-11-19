@@ -1,0 +1,26 @@
+BRAIN MRI - Icon and app name update (native Kotlin project)
+
+1. Open: C:\Users\Admin\Documents\Apps_Flutter\BrainTumor_LAB15_Kotlin_VSCode
+2. Extract the ZIP CONTENTS directly into that folder. The ZIP starts with an "app" folder.
+   Allow Windows to merge the folders and REPLACE these two existing files:
+       app\src\main\AndroidManifest.xml
+       app\src\main\res\layout\activity_main.xml
+   New files will be added in res\mipmap-* and res\values\strings.xml.
+3. Connect your Android phone, enable USB debugging.
+4. From the project root in VS Code PowerShell, run:
+       powershell -NoProfile -ExecutionPolicy Bypass -File .\REINSTALAR_BRAIN_MRI.ps1
+
+Where to change the app name later:
+       app\src\main\res\values\strings.xml
+       <string name="app_name">Brain MRI</string>
+
+Where Android refers to that name and icon:
+       app\src\main\AndroidManifest.xml
+       android:label="@string/app_name"
+       android:icon="@mipmap/ic_launcher"
+
+Icon assets:
+       app\src\main\res\mipmap-*/ic_launcher.png
+
+The AI model, Kotlin source code, Gradle configuration and Android applicationId are untouched.
+The updated build overwrites the already installed app (no separate app).

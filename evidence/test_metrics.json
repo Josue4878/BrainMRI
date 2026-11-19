@@ -1,0 +1,69 @@
+{
+  "dataset": "masoudnickparvar/brain-tumor-mri-dataset",
+  "architecture": "EfficientNetV2B2",
+  "selected_stage": "fine-tuned",
+  "train_n": 4614,
+  "val_n": 815,
+  "test_n": 1600,
+  "class_names": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ],
+  "summary": {
+    "test_accuracy": 0.93375,
+    "test_balanced_accuracy": 0.93375,
+    "test_macro_precision": 0.9362943491353347,
+    "test_macro_recall": 0.93375,
+    "test_macro_f1": 0.9321560813271959,
+    "test_weighted_f1": 0.9321560813271959,
+    "test_roc_auc_macro_ovr": 0.9867333333333332,
+    "test_pr_auc_macro": 0.9685858035981825,
+    "test_accuracy_95pct_bootstrap_ci": [
+      0.921875,
+      0.945
+    ],
+    "lab15_above_70_percent": true
+  },
+  "classification_report": {
+    "glioma": {
+      "precision": 0.9755351681957186,
+      "recall": 0.7975,
+      "f1-score": 0.8775790921595599,
+      "support": 400.0
+    },
+    "meningioma": {
+      "precision": 0.8782201405152225,
+      "recall": 0.9375,
+      "f1-score": 0.9068923821039904,
+      "support": 400.0
+    },
+    "notumor": {
+      "precision": 0.936768149882904,
+      "recall": 1.0,
+      "f1-score": 0.9673518742442564,
+      "support": 400.0
+    },
+    "pituitary": {
+      "precision": 0.954653937947494,
+      "recall": 1.0,
+      "f1-score": 0.9768009768009768,
+      "support": 400.0
+    },
+    "accuracy": 0.93375,
+    "macro avg": {
+      "precision": 0.9362943491353347,
+      "recall": 0.93375,
+      "f1-score": 0.9321560813271959,
+      "support": 1600.0
+    },
+    "weighted avg": {
+      "precision": 0.9362943491353347,
+      "recall": 0.93375,
+      "f1-score": 0.9321560813271959,
+      "support": 1600.0
+    }
+  },
+  "limitation": "Image-level classification; patient independence and near-duplicate absence not established."
+}

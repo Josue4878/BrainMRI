@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brain MRI"
+            android:textColor="@color/accent"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Medical image classification"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Loading TensorFlow Lite model…"
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:padding="13dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Selected MRI image"
+                android:background="@drawable/bg_image" />
+
+            <Button
+                android:id="@+id/pickImage"
+                style="@style/ActionButton"
+                android:layout_marginTop="11dp"
+                android:text="Select MRI from phone" />
+
+            <Button
+                android:id="@+id/classify"
+                style="@style/ActionButton"
+                android:layout_marginTop="7dp"
+                android:text="Analyze selected image" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="Four included test images"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/glioma" style="@style/SampleButton" android:text="Glioma"/>
+            <Button android:id="@+id/meningioma" style="@style/SampleButton" android:text="Meningioma"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/notumor" style="@style/SampleButton" android:text="No tumor"/>
+            <Button android:id="@+id/pituitary" style="@style/SampleButton" android:text="Pituitary"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/allTests"
+            style="@style/ActionButton"
+            android:layout_marginTop="6dp"
+            android:text="Run all 4 test images" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PREDICTION"
+                android:textColor="@color/accent"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/prediction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="No prediction yet"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Choose a sample MRI or pick an image from your phone."
+                android:textColor="@color/muted"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:id="@+id/probabilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" />
+            <TextView
+                android:id="@+id/testResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Educational demo only — not for medical diagnosis."
+            android:gravity="center"
+            android:textColor="@color/muted"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

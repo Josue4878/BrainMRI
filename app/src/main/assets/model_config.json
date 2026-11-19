@@ -1,0 +1,31 @@
+{
+  "architecture": "EfficientNetV2B2",
+  "input_shape": [
+    1,
+    260,
+    260,
+    3
+  ],
+  "input_dtype": "float32",
+  "input_color": "RGB",
+  "input_pixel_range": [
+    0,
+    255
+  ],
+  "resize": "bilinear",
+  "external_normalization": "none",
+  "normalization": "built into EfficientNetV2 (include_preprocessing=True)",
+  "output_shape": [
+    1,
+    4
+  ],
+  "output_dtype": "float32",
+  "output": "softmax scores",
+  "labels": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ],
+  "deployment_note": "Not approved for clinical decision-making"
+}
